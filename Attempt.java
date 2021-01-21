@@ -13,14 +13,24 @@ public class Attempt {
 
 	public static double percentageResults(int bio, int chem, int phys) {
 		double percentage = (100 * (bio + chem + phys)) / 450;
-		return percentage;
+		if(percentage >= 60) {
+			System.out.println("Pass");
+	
+		} else {
+			System.out.println("Fail");
+		}
+			return percentage;
+	
 	}
+		
+	
 
 	public static void main(String[] args) {
 
 		System.out.println(method1(50, 100, 70));
-		System.out.println(percentageResults(50, 20, 70));
-
+		System.out.println(percentageResults(100, 100, 100));
+	
+	
 	}
 
 }
