@@ -1,27 +1,26 @@
 package com;
 
 public class Attempt {
-	public static void method1() {
-		int Physics = 150;
-		System.out.println(Physics);
-		int Chemistry = 150;
-		System.out.println(Chemistry);
-		int Biology = 150;
-		System.out.println(Biology);
+	public static String method1(int bio, int chem, int phys) {
+		String results = "SCORES\r\n";
+		results += "Biology: " + bio + "/150\r\n";
+		results += "Chemistry: " + chem + "/150\r\n";
+		results += "Physics: " + phys + "/150\r\n";
+		results += "Total: " + (bio + chem + phys) + "/450\r\n";
+		return results;
 
-		int result = Physics + Chemistry + Biology;
-		System.out.println(result);
 	}
 
-	public static void method2() {
-		int percentage =  100 / 450 * result;
-		System.out.println(percentage);
+	public static double percentageResults(int bio, int chem, int phys) {
+		double percentage = (100 * (bio + chem + phys)) / 450;
+		return percentage;
 	}
 
 	public static void main(String[] args) {
-		method1();
-		method2();
+
+		System.out.println(method1(50, 100, 70));
+		System.out.println(percentageResults(50, 20, 70));
 
 	}
-	
+
 }
