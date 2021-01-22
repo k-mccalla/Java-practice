@@ -10,7 +10,11 @@ public class Enhancedloops {
 		for (String str : stringArray) {
 			System.out.println(str);{
 			}
-			System.out.println(num);
+			
+			for (int i : num) {
+				
+			}
+			System.out.println(i); 
 			
 			
 			
